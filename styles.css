@@ -1,0 +1,295 @@
+@font-face {
+    font-family: 'default';
+    src: url(assets/default.ttf);
+}
+* {
+    font-family: 'default';
+}
+body {
+    background-color: #FFFBFF;
+    margin:0;
+}
+.navbar {
+    background-color: #F0C808;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 2px solid #DD1C1A; 
+}
+
+.title {
+    font-size: 28px; /* Adjust font size */
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.m1 {
+    color: #DD1C1A;
+}
+
+.m2 {
+    color: black;
+    margin-left: 5px; /* Adjust spacing between the two M's */
+}
+.menu span {
+    font-weight: bold;
+    font-size: 24px;
+    color: #DD1C1A; 
+}
+.menu span:hover {
+    color: #FFFBFF;
+    cursor: pointer;
+}
+
+.account-dropdown {
+    position: relative;
+    font-size: 28px;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #DD1C1A;
+    font-weight: bold;
+    font-size: 16px; 
+    transition: color 0.3s;
+}
+
+.dropdown-button:hover {
+    color: #FFFFFF;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFBFF; /* Darken background */
+    padding: 10px;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.account-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px; /* Increased padding */
+    font-size: 14px; /* Increased font size */
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #DD1C1A;
+    width: 100%;
+    color: #FFFBFF;
+}
+/* Hero section styles */
+.hero {
+    position: relative;
+    background-color: #F0C808;
+    color: white;
+    padding: 0; /* No vertical padding */
+    text-align: center;
+    height: 100vh; /* Set to full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text {
+    margin-bottom: 20px; /* Adjust spacing */
+}
+
+.meal {
+    color: #DD1C1A;
+    font-size: 100px; /* Increase text size to 100px */
+}
+
+.mingle {
+    color: black;
+    font-size: 100px; /* Increase text size to 100px */
+}
+.red {
+    color: #DD1C1A;
+}
+.subtitle {
+    font-size: 50px; /* Increase subtitle size to 50px */
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-in-out forwards; /* Fade-in animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .hero-text {
+        margin-top: 40px; /* Adjust spacing */
+    }
+
+    .meal {
+        font-size: 50px; /* Reduce text size to 50px */
+    }
+
+    .mingle {
+        font-size: 50px; /* Reduce text size to 50px */
+    }
+
+    .subtitle {
+        font-size: 25px; /* Reduce subtitle size to 25px */
+    }
+}
+/* ... Rest of the CSS remains the same ... */
+
+.menu-section {
+    margin-top: 40px; /* Adjust spacing */
+    text-align: center;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111111;
+    font-size: 28px;
+    margin-bottom: 20px; /* Adjust spacing */
+}
+
+.section-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #DD1C1A;
+    margin: 0 10px; /* Adjust spacing */
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns on desktop */
+    gap: 20px; /* Adjust spacing between grid items */
+}
+
+.menu-item {
+    background-color: #F0C808;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Hover transition */
+    border: 2px solid transparent; /* Initial border */
+}
+
+.menu-item:hover {
+    background-color: white;
+    color: #DD1C1A; /* Change text color to red on hover */
+    border-color: #DD1C1A; /* Red border on hover */
+}
+
+.item-title {
+    color: black; /* Title color in black */
+    font-size: 18px;
+    margin-top: 10px; /* Adjust spacing */
+}
+
+.item-rating {
+    color: #DD1C1A; /* Red star color */
+    margin-top: 10px; /* Adjust spacing */
+}
+
+.star {
+    font-size: 20px;
+}
+
+.book-now {
+    background-color: #DD1C1A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Adjust spacing */
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on mobile */
+    }
+
+    /* ... Rest of the mobile styles ... */
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column width as needed */
+    gap: 20px;
+    margin: 10px;
+}
+
+/* Style for each grid item */
+.grid-item {
+    border: 2px solid red;
+    transition: border 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.grid-item:hover {
+    border: 2px dotted red;
+    transform: scale(1.02);
+}
+
+/* Style for the restaurant card */
+.restaurant-card {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style for the restaurant title */
+.restaurant-title {
+    margin: 10px 0;
+    font-weight: lighter;
+}
+
+/* Style for the restaurant image (adjust dimensions as needed) */
+.restaurant-image {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc; /* You can add an image here */
+    margin: 0 auto;
+}
+
+/* Style for the book button */
+.book-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-button:hover {
+    background-color: red;
+    border-radius: 2px;
+}
